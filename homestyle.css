@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Source Sans Pro", "Arial", "sans-serif";
+	margin: auto;
+}
+
+/* Hides / Positions Checkbox & label */
+
+input[type=checkbox] {
+	opacity: 0;
+	float: right;
+	z-index: 1
+}
+
+label {
+	float: right;
+	margin: 30px 100px 0 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+/* Styles Button */
+
+.btn span {
+	display: block;
+	position: relative;
+	width: 28px;
+	height: 4px;
+	margin: 5px 0;
+	background: crimson;
+	border-radius: 6px;
+	z-index: 1;
+}
+
+.btn p {
+  font-family: "Source Sans Pro", "Arial", "sans-serif";
+  color: yellow;
+  text-shadow: 2px 2px crimson;
+  font-weight: bold;
+}
+
+/* Drop-down Menu Styling */
+
+ul.menu {
+	display: none;
+	position: absolute;
+	width: 100%;
+	background: rgba(144, 238, 144, 0.4);
+	margin: 0 auto;
+	padding: 0;
+	/*z-index: 0;*/
+}
+
+ul.menu a{
+	text-decoration: none;
+}
+
+ul.menu a:hover {
+	display: block;
+  opacity: 0.4;
+	background: rgb(255, 165, 0); 
+	padding:10px 0 10px 0
+}
+
+ul.menu a:hover li {
+	color: black;
+  font-weight: bold;
+}
+
+ul.menu li {
+list-style: none;
+padding: 20px;
+font-weight: 600;
+font-size: 1.2em;
+line-height: .7em;
+letter-spacing: 2px;
+text-align: center;
+color: crimson;
+}
+
+ul.menu {
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+/* Toggles Button */
+
+input[type=checkbox]:checked ~ ul.menu {
+   display: block;
+}
+
+/* Header Content */
+
+header {
+	width:100%; 
+	height: 100%;
+	min-height: 1568px;
+        background-size: cover;
+	background-image: url("http://eskipaper.com/images/free-dark-green-wallpaper-1.jpg");
+	margin: 0 auto;
+}
+
+h2 { 
+   position: absolute; 
+   top: 170px; 
+   left: 0; 
+   width: 100%; 
+}
+
+#back { 
+   color: green;
+   text-shadow: 2px 2px black;
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgba(0, 0, 0);
+   padding: 0px; 
+}
+
+.logo {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.logo img {
+	display: block;
+	margin: 0 auto;
+	padding-top:  50px;
+	height: 100%;
+	max-height: 800px;
+	width: 100%;
+	max-width: 500px;
+}
+
+.tagline {
+	font-weight: 400;
+	font-size: 2em;
+	letter-spacing: 2px;
+	line-height: 1em;
+	text-align: center;
+        padding: 10px;
+	color: lime;
+        text-shadow: 2px 2px yellow;
+	margin-top: 0px;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: auto;
+}
+
+.flex-item {
+  background: rgba(144, 238, 144, 0.4);
+  width: auto;
+  height: auto;
+  max-height: 725px;
+  overflow: hidden;
+  margin: 5px;
+  border: 4px solid #fff;
+  border-radius: 6px;
+  text-align: center;
+  color: yellow;
+}
+
+.flex-item_2 {
+  background: rgba(144, 238, 144, 0.4);
+  margin: 0 15px 0 15px;
+	padding: 10px 50px 10px 30px;
+        width: 10%;
+	background-color: transparent;
+	border: 4px solid #fff;
+	border-radius: 6px;
+	font-weight: 400;
+	font-size: 1.1em;
+	letter-spacing: 2px;
+        text-align: center;
+	color: yellow;
+        text-shadow: 1px 1px yellow;
+	text-decoration: none;
+}
+
+.flex-item_3 {
+        background: rgba(144, 238, 144, 0.4);
+        margin: 0 15px 0 15px;
+	padding: 10px 50px 10px 30px;
+        width: 10%;
+	background-color: transparent;
+	border: 4px solid #fff;
+	border-radius: 6px;
+	font-weight: 400;
+	font-size: 1.1em;
+	letter-spacing: 2px;
+        text-align: center;
+	color: yellow;
+        text-shadow: 1px 1px yellow;
+	text-decoration: none;
+}
+
+.flex-item_2:hover {
+	background: rgba(46, 139, 87, 0.4);
+        font-weight: bold;
+        color: yellow;
+}
+
+.flex-item_3:hover {
+  background: rgba(46, 139, 87, 0.4);
+  font-weight: bold;
+  color:yellow;
+}
+
+
+/* Makes Buttons & Logo Responsive */
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+
+	label {
+		margin: 50px;
+	}
+
+	.logo img {
+		padding-top: 100px;
+	}
+
+@media screen and (max-width: 500px) {
+
+}
